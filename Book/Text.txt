@@ -1,0 +1,259 @@
+
+
+
+
+
+
+
+
+Chapter 1
+Introduction
+
+
+
+
+
+
+
+
+
+1.	Introduction
+1.1	 Introduction
+Facial key points detection is a computer technology being used in a variety of applications that identifies human faces in digital images. Facial key points detection also refers to the psychological process by which humans locate and attend to faces in a visual scene. Face detection can be regarded as a specific case of object-class detection. In object-class detection, the task is to find the locations and sizes of all objects in an image that belong to a given class.
+
+1.2	 Motivation
+Detecting facial key points is a very challenging problem.  Facial features vary greatly from one individual to another, and even for a single individual, there is a large amount of variation due to 3D pose, size, position, viewing angle, and illumination conditions. Computer vision research has come a long way in addressing these difficulties, but there remain many opportunities for improvement.
+
+1.3	 Objective
+The objective of this task is to predict key points positions on face images. This can be used as a building block in several applications, such as:
+•	Tracking faces in images and video
+•	Analyzing facial expressions
+•	Detecting dysmorphic facial signs for medical diagnosis
+•	Biometrics / face recognition
+
+1.4	 Scope of the work
+Importance of Face Recognition System as a Security Solution Face is considered as the most important part of human body. Research shows that even face can speak and it has different words for different emotions. It plays a very crucial role for interacting with people in the society. It conveys people’s identity, so it can be used as a key for security solutions in many organizations. Nowadays, face recognition system is getting increasing trend across the world for providing extremely safe and reliable security technology. It is gaining significant importance and attention by thousands of corporate and government organizations only because of its high level of security and reliability. Moreover, this system is providing vast benefits when compared to other biometric security solutions like palm print and finger print. As computation processing powers increases and large storage are available to store data, hence demand of it increases as it is used in several real-world applications.
+
+1.5	 Outline of the thesis
+In “Introduction”, the 1stchapter of the book contains the information about project motivation, the objective of the project and so on.
+In “Literature Review”, the 2ndchapter of the book contains the information about Facial key points detection mechanism, Existing algorithms and its pros and cons, and a gentle overview of Machine learning, Deep learning and Convolutional Neural Network.
+In “Existing system overview”, the 3rdchapter of the book contains the information about Existing system’s technical details and workflow, its pros and cons and features.
+In “Proposed ML based facial key points detection system”, the 4thchapter of the book contains the information about Approach of proposed system, Diagram, Workflow and Merits.
+In “Conclusion”, the 5thchapter of the book shows conclusion of this project.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Chapter 2
+Literature Review
+
+
+
+
+
+
+
+
+
+2.	Literature review
+2.1	 Introduction
+Face detection is a computer technology that is being applied for many different applications that require the identification of human faces in digital images or video. It can be regarded as a specific case of object-class detection, where the task is to find the locations and sizes of all objects in an image that belong to a given class. The technology is able to detect frontal or near-frontal faces in a photo, regardless of orientation, lighting conditions or skin color.
+
+2.2	 How facial key points can be detected?
+Face detection applications use algorithms that decides whether an image is a positive image also called face image or negative image also called non-face image. This is called a classifier. To classify a new image correctly, it is trained on hundreds of thousands of face and non-face images. This feature answers the question “Where are the faces in this picture?”. For each face detected, you get a complete analysis of key points also called landmarks around the eyes, eye brows, jaw, nose and mouth.
+
+2.3	 Key points detection existing algorithms
+OpenCV is a popular computer vision library started by Intel in 1999. The cross-platform library sets its focus on real-time image processing and includes patent-free implementations of the latest computer vision algorithms. OpenCV 2.3.1 now comes with a programming interface to C, C++, Python and Android. OpenCV 2.4 now comes with the very new Face Recognizer class for face recognition, so you can start experimenting with face recognition right away. The currently available algorithms are:
+•	Eigenfaces
+•	Fisherfaces
+•	Local Binary Patterns Histograms
+
+2.3.1	Pros
+Some advantages of OpenCV face detection methods are:
+•	Computationally simple and fast
+•	Shorter training time
+•	Low false positive rate
+•	Better performance in offline learning system
+2.3.2	Cons
+Some disadvantages of OpenCV face detection methods are:
+•	Not a knowledge-based system
+•	Cannot be used in online learning system
+•	Difficult to evolve
+
+2.4	 Machine Learning, Deep Learning and Convolutional Neural Network
+Machine learning is an application of artificial intelligence (AI) that provides systems the ability to automatically learn and improve from experience without being explicitly programmed. Machine learning focuses on the development of computer programs that can access data and use it learn for themselves.
+Deep learning is a subset of machine learning in Artificial Intelligence (AI) that has networks capable of learning unsupervised from data that is unstructured or unlabeled. Also known as Deep Neural Learning or Deep Neural Network.
+A convolutional neural network (CNN) is a type of artificial neural network used in image recognition and processing that is specifically designed to process pixel data.
+CNNs are powerful image processing, artificial intelligence (AI) that use deep learning to perform both generative and descriptive tasks, often using computer vision that includes image and video recognition, along with recommender systems and natural language processing
+
+2.5	 Summary
+In this chapter it is discussed where the system is being applied for. It is also shown that the system can be regarded as a specific case of object-class detection. Hundreds of thousands of face and non-face images data are fed to the system to classify new image correctly. OpenCV classifiers are existing solution to the system. Its pros and cons are also described in the chapter. Finally, a gentle overview to the Machine Learning, Deep Learning and Convolutional Neural Network is provided.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Chapter 3
+Existing system overview
+
+
+
+
+
+
+
+
+
+
+
+3.	Existing system overview
+3.1	 Introduction
+OpenCV is a popular computer vision library started by Intel in 1999. The cross-platform library sets its focus on real-time image processing and includes patent-free implementations of the latest computer vision algorithms. OpenCV 2.3.1 now comes with a programming interface to C, C++, Python and Android. OpenCV 2.4 now comes with the very new Face Recognizer class for face recognition, so you can start experimenting with face recognition right away. The currently available algorithms are:
+•	Eigenfaces
+•	Fisherfaces
+•	Local Binary Patterns Histograms
+
+3.2	 OpenCV
+Local Binary Patterns methodology is used in this project for its high accuracy. Local Binary Patterns methodology has its roots in 2D texture analysis. The basic idea of Local Binary Patterns is to summarize the local structure in an image by comparing each pixel with its neighbourhood. Take a pixel as centre and threshold its neighbours against. If the intensity of the centre pixel is greater-equal its neighbour, then denote it with 1 and 0 if not. You’ll end up with a binary number for each pixel, just like 11001111. So with 8 surrounding pixels, you’ll end up with 2^8 possible combinations, called Local Binary Patterns or sometimes referred to as LBP codes. The first LBP operator described in literature actually used a fixed 3 x 3 neighbourhood just like this:
+ 
+A more formal description of the LBP operator can be given as:
+ 
+, with   as central pixel with intensity  ; and   being the intensity of the neighbor pixel.   is the sign function defined as:
+ 
+By definition, the LBP operator is robust against monotonic grey scale transformations. Dividing the LBP image into m local regions and extract a histogram from each. These histograms are called Local Binary Patterns Histograms.
+
+3.3	 Workflow
+Face Recognition process is about three steps:
+•	Prepare Training Data: Read training images for each person/subject along with their labels, detect faces from each image and assign each detected face an integer label of the person it belongs.
+•	Train Face Recognizer: Train OpenCV's LBPH recognizer by feeding it the data we prepared in step 1.
+•	Prediction: Introduce some test images to face recognizer and see if it predicts them correctly.
+
+3.4	 Result table
+3.5	 Pros and Cons
+Some advantages of OpenCV face detection methods are:
+•	Computationally simple and fast
+•	Shorter training time
+•	Low false positive rate
+•	Better performance in offline learning system
+Some disadvantages of OpenCV face detection methods are:
+•	Not a knowledge-based system
+•	Cannot be used in online learning system
+•	Difficult to evolve
+
+3.6	 Summary
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Chapter 4
+Proposed ML based facial key points detection system
+
+
+
+
+
+
+
+
+
+4.	Proposed Machine Learning based facial key points detection system
+4.1	 Introduction
+4.2	 Approach of the proposed system
+4.2.1	Diagram
+4.2.2	Description
+4.3	 Workflow : User perspective
+4.4	 Features
+4.5	 Merits of the system
+4.6	 Required tools
+4.7	 Summary
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Chapter 5
+Conclusion
+
+
+
+
+
+
+
+
+
+5.	Conclusion
+5.1	 Conclusion
