@@ -223,7 +223,19 @@ In the proposed system, analysis of the face detection problem is performed at f
 
 4.3	 Workflow : User perspective
 4.4	 Features
+Some features of the proposed system are:
+•	This system is a knowledge-based system
+•	It can be used in online learning system
+•	It is easy to evolve the model
+•	It is possible to automate the learning system
+
 4.5	 Merits of the system
+Some merits of the proposed system are:
+•	Detect facial key points with high accuracy
+•	Easy to used in time series problem
+•	Low false positive rate
+•	Improved computing performance with short training time
+
 4.6	 Required tools
 4.7	 Summary
 
