@@ -283,3 +283,4 @@ Conclusion
 
 5.	Conclusion
 5.1	 Conclusion
+Detecing facial keypoints is a very challenging problem. Facial features vary greatly from one individual to another due to position, viewing angle, and illumination conditions. Computer vision research has come a long way in addressing these difficulties, but there remain many opportunities for improvement. This proposed system will provide high accuracy performance to detect facial key points using latest trending technologies.
