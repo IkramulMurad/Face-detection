@@ -219,6 +219,8 @@ In this proposed system, the combined knowledge of computer vision techniques an
 4.2	 Approach of the proposed system
 4.2.1	Diagram
 4.2.2	Description
+In the proposed system, analysis of the face detection problem is performed at first. It includes data cleaning, data visualization and features extraction. Then appropriate Machine Learning algorithm is applied on training data such as Logistic regression, Deep Learning, Convolutional Neural Network etc. After that, a model can be obtained and test data are applied on that model. Result are obtained and then error analysis of the model is performed. If error rate is greater than a threshold value then changes to model are required else the model is deployed. This process is repitative.
+
 4.3	 Workflow : User perspective
 4.4	 Features
 4.5	 Merits of the system
