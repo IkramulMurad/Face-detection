@@ -181,7 +181,7 @@ Some disadvantages of OpenCV face detection methods are:
 •	Difficult to evolve
 
 3.6	 Summary
-
+In this chapter it is discussed what OpenCV is. It is also shown that what methods of face detection are offered by OpenCV and how to use that methods. OpenCV's technical details, to be specific how Local Binary Pattern method works are discussed here. It also depicts workflow of OpenCV face detection and its pros and cons are also described in the chapter.
 
 
 
