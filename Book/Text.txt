@@ -237,8 +237,18 @@ Some merits of the proposed system are:
 •	Improved computing performance with short training time
 
 4.6	 Required tools
-4.7	 Summary
+Required tools for the proposed system are:
+•	Python 3.5
+•	IDE
+•	Numpy
+•	Matplotlib
+•	Pandas
+•	Seaborn
+•	Tensorflow
+•	Keras
 
+4.7	 Summary
+In this chapter proposed system is discussed in details. A diagram is also provided that depicts how the proposed system will work and its description provided as well. A user view workflow, features and merits of the proposed system is also given. Finally, required tools for the proposed system is also mentioned.
 
 
 
