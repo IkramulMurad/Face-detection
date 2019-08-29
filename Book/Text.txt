@@ -1,4 +1,4 @@
-
+﻿
 
 
 
@@ -19,13 +19,13 @@ Introduction
 
 1.	Introduction
 1.1	 Introduction
-Facial key points detection is a computer technology being used in a variety of applications that identifies human faces in digital images. Facial key points detection also refers to the psychological process by which humans locate and attend to faces in a visual scene. Face detection can be regarded as a specific case of object-class detection. In object-class detection, the task is to find the locations and sizes of all objects in an image that belong to a given class.
+Facial key points detection is a computer technology being used in a variety of applications that identifies human faces in digital images. Facial key points detection also refers to the psychological process by which humans locate and attend to faces in a visual scene. Face detection can be regarded as a specific case of object-class detection. In object-class detection, the task is to find the locations and sizes of all objects in an image that belong to a given class. Detect facial keypoints is a critical element in face recognition. However, there is difficulty to catch keypoints on the face due to complex influences from original images, and there is no guidance to suitable algorithms. In this paper, we study different algorithms that can be applied to locate keyponits. Specifically: our framework (1)prepare the data for further investigation (2)Using PCA and LBP to process the data (3) Apply different algorithms to analysis data, including linear regression models, tree based model, neural network and convolutional neural network, etc. Finally we will give our conclusion and further research topic. A comprehensive set of experiments on dataset demonstrates the effectiveness of our framework. [Shenghao Shi, 15 Oct 2017, Machine Learning, Cornell University]
 
 1.2	 Motivation
-Detecting facial key points is a very challenging problem.  Facial features vary greatly from one individual to another, and even for a single individual, there is a large amount of variation due to 3D pose, size, position, viewing angle, and illumination conditions. Computer vision research has come a long way in addressing these difficulties, but there remain many opportunities for improvement.
+Detecting facial key points is a very challenging problem.  Facial features vary greatly from one individual to another, and even for a single individual, there is a large amount of variation due to 3D pose, size, position, viewing angle, and illumination conditions. Computer vision research has come a long way in addressing these difficulties, but there remain many opportunities for improvement. Recognizing faces is a very challenging problem in the field of image processing. The techniques presently being used are Biometric recognition (but Iris scanners are far too expensive), Eigenfaces(inaccurate with varying image factors like intensity, camera angles), line edgemaps. While facial features in images depend on a lot many conditions , faces can be recognised easily if we use the relevant keypoints and landmarks for identification. The unchanging ratios and distances between these mark the importance of this approach. [Ajay Sharma, 01 April 2015, Face detection: Artificial Intelligence, IIT Kanpur]
 
 1.3	 Objective
-The objective of this task is to predict key points positions on face images. This can be used as a building block in several applications, such as:
+The objective of this task is to predict key points positions on face images. Detection of facial keypoints is building block for many application in computer vision. Research has been done on this part but still there is hope for improvement. What really motivated me was that this problem works as the first steps for several applications, such as:
 •	Tracking faces in images and video
 •	Analyzing facial expressions
 •	Detecting dysmorphic facial signs for medical diagnosis
@@ -108,7 +108,14 @@ Some disadvantages of OpenCV face detection methods are:
 •	Difficult to evolve
 
 2.4	 Machine Learning, Deep Learning and Convolutional Neural Network
-Machine learning is an application of artificial intelligence (AI) that provides systems the ability to automatically learn and improve from experience without being explicitly programmed. Machine learning focuses on the development of computer programs that can access data and use it learn for themselves.
+Machine learning is an application of artificial intelligence (AI) that provides systems the ability to automatically learn and improve from experience without being explicitly programmed. Machine learning focuses on the development of computer programs that can access data and use it learn for themselves. Machine learning is one of the most exciting technologies that one would have ever come across. As it is evident from the name, it gives the computer that which makes it more similar to humans: The ability to learn. Machine learning is actively being used today, perhaps in many more places than one would expect. Supervised learning: The computer is presented with example inputs and their desired outputs, given by a “teacher”, and the goal is to learn a general rule that maps inputs to outputs. The training process continues until the model achieves the desired level of accuracy on the training data. Some real-life examples are:
+Image Classification: You train with images/labels. Then in the future you give a new image expecting that the computer will recognize the new object.
+Market Prediction/Regression: You train the computer with historical market data and ask the computer to predict the new price in the future.
+Unsupervised learning: No labels are given to the learning algorithm, leaving it on its own to find structure in its input. It is used for clustering population in different groups. Unsupervised learning can be a goal in itself (discovering hidden patterns in data).
+Clustering: You ask the computer to separate similar data into clusters, this is essential in research and science.
+High Dimension Visualization: Use the computer to help us visualize high dimension data.
+Generative Models: After a model captures the probability distribution of your input data, it will be able to generate more data. This can be very useful to make your classifier more robust.
+
 Deep learning is a subset of machine learning in Artificial Intelligence (AI) that has networks capable of learning unsupervised from data that is unstructured or unlabeled. Also known as Deep Neural Learning or Deep Neural Network.
 A convolutional neural network (CNN) is a type of artificial neural network used in image recognition and processing that is specifically designed to process pixel data.
 CNNs are powerful image processing, artificial intelligence (AI) that use deep learning to perform both generative and descriptive tasks, often using computer vision that includes image and video recognition, along with recommender systems and natural language processing
