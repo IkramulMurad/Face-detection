@@ -245,6 +245,12 @@ Some features of the proposed system are:
 •	It is easy to evolve the model
 •	It is possible to automate the learning system
 
+CNNs, like neural networks, are made up of neurons with learnable weights and biases. Each neuron receives several inputs, takes a weighted sum over them, pass it through an activation function and responds with an output. The whole network has a loss function and all the tips and tricks that we developed for neural networks still apply on CNNs.
+
+Unlike neural networks, where the input is a vector, here the input is a multi-channeled image (3 channeled in this case). There are other differences that we will talk about in a while. Before we go any deeper, we have to understand what convolution means. Img*
+
+
+
 4.5	 Merits of the system
 Some merits of the proposed system are:
 •	Detect facial key points with high accuracy
