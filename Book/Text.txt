@@ -247,8 +247,53 @@ Some features of the proposed system are:
 
 CNNs, like neural networks, are made up of neurons with learnable weights and biases. Each neuron receives several inputs, takes a weighted sum over them, pass it through an activation function and responds with an output. The whole network has a loss function and all the tips and tricks that we developed for neural networks still apply on CNNs.
 
-Unlike neural networks, where the input is a vector, here the input is a multi-channeled image (3 channeled in this case). There are other differences that we will talk about in a while. Before we go any deeper, we have to understand what convolution means. Img*
 
+CNNs operate over Volumes
+Unlike neural networks, where the input is a vector, here the input is a multi-channeled image (3 channeled in this case). There are other differences that we will talk about in a while. Before we go any deeper, we have to understand what convolution means. Example of a RGB image
+
+Convolution
+
+2. Convolving an image with a filter
+We take the 5*5*3 filter and slide it over the complete image and along the way take the dot product between the filter and chunks of the input image.
+
+3. How convolution looks
+For every dot product taken, the result is a scalar. when we convolve the complete image with the filter we will get 28*28 unique positions where the filter can be put on the image.
+
+4. This!
+I leave it upon you to figure out how the ‘28’ comes. (Hint: There are 28*28  )
+Now, if we back to CNNs the convolution layer is the main building block of a convolutional neural network.
+
+5. Convolution Layer
+The convolution layer comprises of a set of independent filters. In this example there are 6 independent filters. Each filter is independently convolved with the image and we end up with 6 feature maps of shape 28*28*1.
+Suppose we have a number of convolution layers in sequence. What happens then?
+
+6. Convolution Layers in sequence
+All these filters are initialized randomly and become our parameters which will be learned by the network subsequently.
+An example of a trained network of face images is look like below.
+
+7. Filters in a trained network
+Take a look at the filters in the very first layer. These are our 5*5*3 filters. Through back propagation, they have tuned themselves to become blobs of coloured pieces and edges. As we go deeper to other convolution layers, the filters are doing dot products to the input of the previous convolution layers. So, they are taking the smaller coloured pieces or edges and making larger pieces out of them.
+Take a look and imagine the 28*28*1 grid as a grid of 28*28 neurons. For a particular feature map the output received on convolving the image with a particular filter is called a feature map, each neuron is connected only to a small chunk of the input image and all the neurons have the same connection weights. So again coming back to the differences between CNN and a neural network.
+------
+CNNs parameter and connectivity
+Parameter sharing is sharing of weights by all neurons in a particular feature map.
+Local connectivity is the concept of each neural connected only to a subset of the input image unlike a neural network where all the neurons are fully connected.
+This helps to reduce the number of parameters in the whole system and makes the computation more efficient.
+
+
+Pooling Layers
+A pooling layer is another building block of a CNN.
+
+Pooling
+Its function is to progressively reduce the spatial size of the representation to reduce the amount of parameters and computation in the network. Pooling layer operates on each feature map independently.
+The most common approach used in pooling is max pooling.
+
+Max Pooling
+Typical Architecture of a CNN
+
+Typical architecture of CNN
+We have already discussed about convolution layers denoted by CONV and pooling layers denoted by POOL. RELU is just a non linearity which is applied similar to neural networks.
+The FC is the fully connected layer of neurons at the end of CNN. Neurons in a fully connected layer have full connections to all activations in the previous layer, as seen in regular Neural Networks and work in a similar way.
 
 
 4.5	 Merits of the system
